@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطوة للسياحة والسفر | KHOTWA Travel</title>
+    <meta name="description" content="خطوة للسياحة والسفر - حجز تذاكر طيران، فنادق، سياحة داخلية وخارجية، رحلات حج وعمرة بأفضل الأسعار.">
+    
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0B2D6B',
+                            dark: '#071F4B',
+                            light: '#164293'
+                        },
+                        skybrand: {
+                            DEFAULT: '#2BB3F3',
+                            dark: '#1497D6',
+                            light: '#E6F6FE'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+            overflow-x: hidden;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(11, 45, 107, 0.90) 0%, rgba(11, 45, 107, 0.72) 55%, rgba(43, 179, 243, 0.55) 100%);
+        }
+        .card-hover {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(11, 45, 107, 0.12), 0 8px 10px -6px rgba(43, 179, 243, 0.12);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0B2D6B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2BB3F3;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-skybrand selection:text-white">
+
+    <!-- Top Mini Contact Bar -->
+    <div class="bg-navy-dark text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap">
+                <a href="tel:01557411500" class="flex items-center gap-1.5 hover:text-skybrand transition" dir="ltr">
+                    <i class="fa-solid fa-phone text-skybrand"></i>
+                    <span>01557411500</span>
+                </a>
+                <span class="text-white/30">|</span>
+                <a href="tel:01036271151" class="flex items-center gap-1.5 hover:text-skybrand transition" dir="ltr">
+                    <i class="fa-brands fa-whatsapp text-green-400"></i>
+                    <span>01036271151</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center gap-2 text-gray-200">
+                <i class="fa-solid fa-location-dot text-skybrand"></i>
+                <span>حلوان، شارع رايل، تقاطع شارع مصطفى فهمي، أعلى سنتر شاهين</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Custom Brand SVG Logo -->
+                <a href="#home" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-14 h-14 flex items-center justify-center">
+                        <!-- Custom SVG matching KHOTWA Travel logo -->
+                        <svg viewBox="0 0 140 120" class="w-full h-full overflow-visible" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Sky Blue Left Accent -->
+                            <path d="M28 22 C35 22 38 27 38 35 L38 58 L28 66 L28 32 C28 26 24 23 22 22 Z" fill="#2BB3F3"/>
+                            <!-- Navy Blue Main 'K' Vertical & Lower Leg -->
+                            <path d="M36 20 L62 20 C56 22 54 26 54 33 L54 51 L41 61 L41 33 C41 26 39 22 36 20 Z" fill="#0B2D6B"/>
+                            <path d="M41 78 L54 68 L54 88 C54 94 56 97 61 99 L36 99 C40 97 41 94 41 88 Z" fill="#0B2D6B"/>
+                            <path d="M58 65 L71 55 L96 87 C101 93 105 97 111 99 L84 99 C79 97 75 93 70 86 Z" fill="#0B2D6B"/>
+                            <!-- Dynamic Navy Swoosh -->
+                            <path d="M36 101 C18 95 22 72 48 54 C69 39 92 26 104 20 C88 30 67 45 50 59 C29 76 28 93 36 101 Z" fill="#0B2D6B"/>
+                            <!-- Dynamic Sky Blue Swoosh -->
+                            <path d="M41 101 C29 94 33 76 55 59 C73 45 92 31 106 23 C91 34 74 49 58 63 C39 79 36 94 41 101 Z" fill="#2BB3F3"/>
+                            <!-- Airplane Silhouette at Top Right -->
+                            <g transform="translate(104, 14) rotate(-32)">
+                                <path d="M2 10 L10 10 L16 1 L20 1 L16 10 L24 10 L27 6 L30 6 L28 11.5 L30 17 L27 17 L24 13 L16 13 L20 22 L16 22 L10 13 L2 13 C0 13 0 10 2 10 Z" fill="#2BB3F3"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex items-baseline gap-1" dir="ltr">
+                            <span class="text-xl sm:text-2xl font-black tracking-tight text-navy">KHOTW<span class="text-skybrand">A</span></span>
+                            <span class="text-sm sm:text-base font-bold text-skybrand">Travel</span>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-navy -mt-1">خطوة للسياحة والسفر</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8 font-bold text-navy">
+                    <a href="#home" class="hover:text-skybrand transition py-2 border-b-2 border-skybrand">الرئيسية</a>
+                    <a href="#services" class="hover:text-skybrand transition py-2 border-b-2 border-transparent hover:border-skybrand">خدماتنا</a>
+                    <a href="#packages" class="hover:text-skybrand transition py-2 border-b-2 border-transparent hover:border-skybrand">باقات السفر</a>
+                    <a href="#about" class="hover:text-skybrand transition py-2 border-b-2 border-transparent hover:border-skybrand">عن الشركة</a>
+                    <a href="#contact" class="hover:text-skybrand transition py-2 border-b-2 border-transparent hover:border-skybrand">تواصل معنا</a>
+                </nav>
+
+                <!-- CTA Button & Mobile Menu Trigger -->
+                <div class="flex items-center gap-3">
+                    <button onclick="openBookingModal('حجز رحلة مخصصة')" class="hidden sm:inline-flex items-center gap-2 bg-navy hover:bg-skybrand text-white font-bold px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        <span>احجز رحلتك الآن</span>
+                    </button>
+                    
+                    <button id="mobile-menu-btn" aria-label="القائمة" class="lg:hidden p-2.5 rounded-xl text-navy hover:bg-skybrand-light transition">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#home" class="mobile-link block px-4 py-2.5 rounded-xl font-bold text-navy bg-skybrand-light">الرئيسية</a>
+            <a href="#services" class="mobile-link block px-4 py-2.5 rounded-xl font-bold text-navy hover:bg-gray-50">خدماتنا</a>
+            <a href="#packages" class="mobile-link block px-4 py-2.5 rounded-xl font-bold text-navy hover:bg-gray-50">باقات السفر</a>
+            <a href="#about" class="mobile-link block px-4 py-2.5 rounded-xl font-bold text-navy hover:bg-gray-50">عن الشركة</a>
+            <a href="#contact" class="mobile-link block px-4 py-2.5 rounded-xl font-bold text-navy hover:bg-gray-50">تواصل معنا</a>
+            <div class="pt-2">
+                <button onclick="openBookingModal('حجز رحلة مخصصة')" class="w-full flex justify-center items-center gap-2 bg-navy text-white font-bold py-3 rounded-xl shadow">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <span>احجز رحلتك الآن</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="relative min-h-[85vh] flex items-center pt-10 pb-20 overflow-hidden">
+        <!-- Scenic Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" 
+                 onerror="this.src='https://placehold.co/1920x1080/0B2D6B/FFFFFF?text=Khotwa+Travel'"
+                 alt="وجهات سياحية ساحرة" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl text-white space-y-6">
+                <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/25 px-4 py-1.5 rounded-full text-sm font-semibold text-skybrand-light">
+                    <span class="w-2 h-2 rounded-full bg-skybrand animate-ping"></span>
+                    <span>مع خطوة للسياحة والسفر.. العالم بين يديك</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                    خطوتك الأولى نحو <br>
+                    <span class="text-skybrand">رحلة لا تُنسى</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-gray-100 leading-relaxed font-tajawal max-w-2xl">
+                    نقدم لك أفضل عروض الطيران، حجز الفنادق الفاخرة، رحلات السياحة الداخلية في أجمل مدن مصر، والرحلات الخارجية وبرامج الحج والعمرة بأعلى مستوى من الراحة والأمان.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#packages" class="bg-skybrand hover:bg-skybrand-dark text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2">
+                        <span>استكشف العروض</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <a href="https://wa.me/201036271151?text=مرحباً%20خطوة%20للسياحة%20والسفر،%20أرغب%20في%20الاستفسار%20عن%20الرحلات" target="_blank" rel="noopener noreferrer" class="bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/30 text-white font-bold px-7 py-3.5 rounded-xl transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-green-400 text-xl"></i>
+                        <span>تواصل عبر واتساب</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Interactive Quick Trip Search / Booking Bar -->
+            <div class="mt-12 bg-white rounded-2xl shadow-2xl p-5 sm:p-6 border border-gray-100">
+                <form id="quick-search-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+                    <!-- Destination -->
+                    <div>
+                        <label class="block text-xs font-bold text-navy mb-1.5">
+                            <i class="fa-solid fa-location-dot text-skybrand ml-1"></i> الوجهة المطلوبة
+                        </label>
+                        <select id="search-destination" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20">
+                            <option value="all">جميع الوجهات</option>
+                            <option value="شرم الشيخ">شرم الشيخ</option>
+                            <option value="الغردقة والجونة">الغردقة والجونة</option>
+                            <option value="دهب">دهب</option>
+                            <option value="الأقصر وأسوان">الأقصر وأسوان</option>
+                            <option value="العمرة (مكة والمدينة)">العمرة (مكة والمدينة)</option>
+                            <option value="دبي والإمارات">دبي والإمارات</option>
+                            <option value="تركيا (إسطنبول)">تركيا (إسطنبول)</option>
+                        </select>
+                    </div>
+
+                    <!-- Trip Type -->
+                    <div>
+                        <label class="block text-xs font-bold text-navy mb-1.5">
+                            <i class="fa-solid fa-suitcase-rolling text-skybrand ml-1"></i> نوع الرحلة
+                        </label>
+                        <select id="search-type" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20">
+                            <option value="all">الكل</option>
+                            <option value="domestic">سياحة داخلية</option>
+                            <option value="international">سياحة خارجية</option>
+                            <option value="umrah">حج وعمرة</option>
+                            <option value="flights">حجز طيران</option>
+                        </select>
+                    </div>
+
+                    <!-- Travel Date -->
+                    <div>
+                        <label class="block text-xs font-bold text-navy mb-1.5">
+                            <i class="fa-regular fa-calendar text-skybrand ml-1"></i> تاريخ السفر المتوقع
+                        </label>
+                        <input type="date" id="search-date" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20">
+                    </div>
+
+                    <!-- Guests -->
+                    <div>
+                        <label class="block text-xs font-bold text-navy mb-1.5">
+                            <i class="fa-solid fa-users text-skybrand ml-1"></i> عدد الأفراد
+                        </label>
+                        <select id="search-guests" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20">
+                            <option value="فرد واحد">فرد واحد</option>
+                            <option value="فردين (شهر عسل / ثنائي)" selected>فردين (ثنائي)</option>
+                            <option value="عائلة (3 - 5 أفراد)">عائلة (3 - 5 أفراد)</option>
+                            <option value="مجموعة (+6 أفراد)">مجموعة (+6 أفراد)</option>
+                        </select>
+                    </div>
+
+                    <!-- Search Submit -->
+                    <div>
+                        <button type="submit" class="w-full bg-navy hover:bg-skybrand text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>ابحث واحجز الآن</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Services Section (خدماتنا) -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-skybrand font-bold text-sm tracking-wide bg-skybrand-light px-4 py-1.5 rounded-full">ماذا نقدم لك؟</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy mt-3">خدماتنا السياحية المتكاملة</h2>
+                <p class="text-gray-600 mt-3 font-tajawal">نوفر لك كافة حلول السفر والسياحة تحت سقف واحد وبأعلى معايير الجودة والاحترافية.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                <!-- Service 1 -->
+                <div class="bg-slate-50 rounded-2xl p-7 border border-gray-100 card-hover group">
+                    <div class="w-14 h-14 rounded-2xl bg-navy text-white group-hover:bg-skybrand transition-colors flex items-center justify-center text-2xl mb-5 shadow-md">
+                        <i class="fa-solid fa-plane"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">حجز تذاكر الطيران</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-tajawal mb-4">
+                        أفضل الأسعار التنافسية لجميع خطوط الطيران العالمية والمحلية، مع مرونة في تعديل المواعيد ومتابعة مستمرة لحجزك.
+                    </p>
+                    <button onclick="openBookingModal('حجز تذاكر طيران')" class="text-skybrand font-bold text-sm inline-flex items-center gap-1.5 group-hover:translate-x-[-4px] transition-transform">
+                        <span>احجز تذكرتك</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-50 rounded-2xl p-7 border border-gray-100 card-hover group">
+                    <div class="w-14 h-14 rounded-2xl bg-navy text-white group-hover:bg-skybrand transition-colors flex items-center justify-center text-2xl mb-5 shadow-md">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">السياحة الداخلية</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-tajawal mb-4">
+                        اكتشف سحر مصر في شرم الشيخ، الغردقة، دهب، الساحل الشمالي، والأقصر وأسوان مع باقات شاملة الانتقالات والإقامة.
+                    </p>
+                    <button onclick="openBookingModal('سياحة داخلية')" class="text-skybrand font-bold text-sm inline-flex items-center gap-1.5 group-hover:translate-x-[-4px] transition-transform">
+                        <span>استفسر عن الباقات</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-50 rounded-2xl p-7 border border-gray-100 card-hover group">
+                    <div class="w-14 h-14 rounded-2xl bg-navy text-white group-hover:bg-skybrand transition-colors flex items-center justify-center text-2xl mb-5 shadow-md">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">السياحة الخارجية</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-tajawal mb-4">
+                        رحلات سياحية مميزة إلى دبي، تركيا، المالديف، وأوروبا تشمل الاستقبال من المطار والجولات السياحية اليومية.
+                    </p>
+                    <button onclick="openBookingModal('سياحة خارجية')" class="text-skybrand font-bold text-sm inline-flex items-center gap-1.5 group-hover:translate-x-[-4px] transition-transform">
+                        <span>خطط لرحلتك</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-50 rounded-2xl p-7 border border-gray-100 card-hover group">
+                    <div class="w-14 h-14 rounded-2xl bg-navy text-white group-hover:bg-skybrand transition-colors flex items-center justify-center text-2xl mb-5 shadow-md">
+                        <i class="fa-solid fa-kaaba"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">رحلات الحج والعمرة</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-tajawal mb-4">
+                        برامج عمرة متكاملة طوال العام (اقتصادية و5 نجوم) بإقامة قريبة من الحرم المكي والنبوي ومشرفين متخصصين.
+                    </p>
+                    <button onclick="openBookingModal('رحلات الحج والعمرة')" class="text-skybrand font-bold text-sm inline-flex items-center gap-1.5 group-hover:translate-x-[-4px] transition-transform">
+                        <span>برامج العمرة</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-slate-50 rounded-2xl p-7 border border-gray-100 card-hover group">
+                    <div class="w-14 h-14 rounded-2xl bg-navy text-white group-hover:bg-skybrand transition-colors flex items-center justify-center text-2xl mb-5 shadow-md">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">حجز الفنادق والمنتجعات</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-tajawal mb-4">
+                        تعاقدات مباشرة مع أرقى الفنادق والمنتجعات السياحية داخل وخارج مصر بأسعار حصرية وتأكيد فوري للحجز.
+                    </p>
+                    <button onclick="openBookingModal('حجز فنادق ومنتجعات')" class="text-skybrand font-bold text-sm inline-flex items-center gap-1.5 group-hover:translate-x-[-4px] transition-transform">
+                        <span>احجز فندقك</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-slate-50 rounded-2xl p-7 border border-gray-100 card-hover group">
+                    <div class="w-14 h-14 rounded-2xl bg-navy text-white group-hover:bg-skybrand transition-colors flex items-center justify-center text-2xl mb-5 shadow-md">
+                        <i class="fa-solid fa-passport"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy mb-2">التأشيرات وبرامج شهر العسل</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed font-tajawal mb-4">
+                        مساعدة متكاملة في تجهيز ملفات التأشيرات، وتصميم برامج شهر عسل رومانسية لا تُنسى بأدق التفاصيل.
+                    </p>
+                    <button onclick="openBookingModal('تأشيرات / شهر عسل')" class="text-skybrand font-bold text-sm inline-flex items-center gap-1.5 group-hover:translate-x-[-4px] transition-transform">
+                        <span>تواصل معنا</span>
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Featured Packages Section (أحدث العروض والباقات) -->
+    <section id="packages" class="py-20 bg-slate-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-skybrand font-bold text-sm bg-white px-4 py-1.5 rounded-full shadow-sm">عروض حصرية</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy mt-3">أحدث العروض والباقات السياحية</h2>
+                    <p class="text-gray-600 mt-2 font-tajawal">اختر وجهتك المفضلة واستمتع بأفضل الأسعار والخدمات مع خطوة للسياحة والسفر.</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2" id="package-filters">
+                    <button data-filter="all" class="filter-btn active bg-navy text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow transition">الكل</button>
+                    <button data-filter="domestic" class="filter-btn bg-white text-navy hover:bg-skybrand-light font-bold px-5 py-2.5 rounded-xl text-sm border border-gray-200 transition">سياحة داخلية</button>
+                    <button data-filter="international" class="filter-btn bg-white text-navy hover:bg-skybrand-light font-bold px-5 py-2.5 rounded-xl text-sm border border-gray-200 transition">سياحة خارجية</button>
+                    <button data-filter="umrah" class="filter-btn bg-white text-navy hover:bg-skybrand-light font-bold px-5 py-2.5 rounded-xl text-sm border border-gray-200 transition">عمرة</button>
+                </div>
+            </div>
+
+            <!-- Packages Grid -->
+            <div id="packages-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Packages rendered dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Why Choose Us & About Section (لماذا خطوة للسياحة والسفر؟) -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Right Content: Why Choose Us -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-skybrand font-bold text-sm bg-skybrand-light px-4 py-1.5 rounded-full">من نحن ولماذا تختارنا؟</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy leading-snug">
+                        شريكك الموثوق في كل <span class="text-skybrand">خطوة</span> من رحلتك
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed font-tajawal text-base sm:text-lg">
+                        في <strong>خطوة للسياحة والسفر (KHOTWA Travel)</strong>، نؤمن بأن السفر تجربة تصنع الذكريات. انطلاقاً من مقرنا في قلب حلوان، نحرص على تقديم برامج سياحية مدروسة بعناية تناسب الأفراد والعائلات بأعلى جودة وأفضل سعر.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
+                        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <div class="w-11 h-11 rounded-xl bg-skybrand/15 text-skybrand flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">مصداقية وأمان تام</h4>
+                                <p class="text-xs text-gray-600 mt-1 font-tajawal">تأكيدات فورية ومضمونة للفنادق وتذاكر الطيران بدون أي رسوم خفية.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <div class="w-11 h-11 rounded-xl bg-skybrand/15 text-skybrand flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">دعم فني 24/7</h4>
+                                <p class="text-xs text-gray-600 mt-1 font-tajawal">فريقنا معك خطوة بخطوة قبل وأثناء وبعد رحلتك للرد على كافة استفساراتك.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <div class="w-11 h-11 rounded-xl bg-skybrand/15 text-skybrand flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-tags"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">أسعار تنافسية وعروض مستمرة</h4>
+                                <p class="text-xs text-gray-600 mt-1 font-tajawal">باقات مرنة تناسب جميع الميزانيات مع خصومات خاصة للمجموعات والعائلات.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-gray-100">
+                            <div class="w-11 h-11 rounded-xl bg-skybrand/15 text-skybrand flex items-center justify-center shrink-0 text-xl">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy">برامج مصممة خصيصاً لك</h4>
+                                <p class="text-xs text-gray-600 mt-1 font-tajawal">نخطط رحلتك حسب رغبتك ومواعيدك سواء للترفيه، الاستجمام، أو العمرة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Content: Travel Consultant / Team Spotlight Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gradient-to-br from-navy to-navy-dark rounded-3xl p-7 sm:p-8 text-white shadow-2xl relative overflow-hidden">
+                        <div class="absolute -top-12 -left-12 w-40 h-40 bg-skybrand/20 rounded-full blur-2xl"></div>
+                        <div class="relative z-10 flex flex-col items-center text-center">
+                            <div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-skybrand to-white mb-4 shadow-lg">
+                                <div class="w-full h-full rounded-full bg-navy-light flex items-center justify-center overflow-hidden">
+                                    <i class="fa-solid fa-user-tie text-4xl text-skybrand"></i>
+                                </div>
+                            </div>
+                            <span class="bg-skybrand/20 text-skybrand text-xs font-bold px-3 py-1 rounded-full mb-2">فريق خدمة العملاء والاستشارات</span>
+                            <h3 class="text-2xl font-bold">نحن هنا لتخطيط رحلتك القادمة</h3>
+                            <p class="text-gray-200 text-sm mt-3 leading-relaxed font-tajawal">
+                                "سواء كنت تبحث عن عطلة عائلية ممتعة، رحلة شهر عسل مميزة، أو أداء مناسك العمرة بكل طمأنينة، فريق <strong>خطوة للسياحة والسفر</strong> جاهز لخدمتك على مدار الساعة."
+                            </p>
+
+                            <div class="w-full grid grid-cols-3 gap-3 my-6 pt-5 border-t border-white/15">
+                                <div>
+                                    <div class="text-2xl font-black text-skybrand">+1500</div>
+                                    <div class="text-xs text-gray-300">عميل سعيد</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-black text-skybrand">+45</div>
+                                    <div class="text-xs text-gray-300">وجهة سياحية</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-black text-skybrand">100%</div>
+                                    <div class="text-xs text-gray-300">التزام ومصداقية</div>
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/201557411500" target="_blank" rel="noopener noreferrer" class="w-full bg-skybrand hover:bg-skybrand-dark text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>تحدث مع مستشار السفر الآن</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Contact & Location Section (تواصل معنا ومقر الشركة) -->
+    <section id="contact" class="py-20 bg-slate-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-skybrand font-bold text-sm bg-white px-4 py-1.5 rounded-full shadow-sm">تواصل معنا</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-navy mt-3">نسعد بزيارتكم وتواصلكم معنا</h2>
+                <p class="text-gray-600 mt-2 font-tajawal">تفضل بزيارة مقرنا في حلوان أو تواصل معنا هاتفياً وعبر الواتساب لحجز رحلتك فوراً.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Contact Details Cards -->
+                <div class="lg:col-span-5 space-y-5">
+                    <!-- Address Card -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy text-white flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-navy text-lg">مقر الشركة</h3>
+                            <p class="text-gray-700 font-semibold mt-1 leading-relaxed">
+                                حلوان، شارع رايل، تقاطع شارع مصطفى فهمي، أعلى سنتر شاهين.
+                            </p>
+                            <span class="inline-block mt-2 text-xs text-skybrand font-bold bg-skybrand-light px-3 py-1 rounded-lg">
+                                القاهرة - جمهورية مصر العربية
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Phone Numbers Card -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-skybrand text-white flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div class="w-full">
+                            <h3 class="font-bold text-navy text-lg">أرقام الحجز والاستفسار</h3>
+                            <div class="mt-3 space-y-2.5">
+                                <div class="flex items-center justify-between bg-slate-50 px-4 py-2.5 rounded-xl border border-gray-100">
+                                    <a href="tel:01557411500" class="font-bold text-navy hover:text-skybrand text-base tracking-wider" dir="ltr">01557411500</a>
+                                    <div class="flex items-center gap-2">
+                                        <a href="tel:01557411500" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">اتصال</a>
+                                        <a href="https://wa.me/201557411500" target="_blank" rel="noopener noreferrer" class="text-xs bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-700 transition">واتساب</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between bg-slate-50 px-4 py-2.5 rounded-xl border border-gray-100">
+                                    <a href="tel:01036271151" class="font-bold text-navy hover:text-skybrand text-base tracking-wider" dir="ltr">01036271151</a>
+                                    <div class="flex items-center gap-2">
+                                        <a href="tel:01036271151" class="text-xs bg-navy text-white px-3 py-1.5 rounded-lg hover:bg-navy-light transition">اتصال</a>
+                                        <a href="https://wa.me/201036271151" target="_blank" rel="noopener noreferrer" class="text-xs bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-700 transition">واتساب</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Working Hours Card -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-light text-white flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-navy text-lg">مواعيد العمل</h3>
+                            <p class="text-gray-600 text-sm mt-1 font-tajawal">السبت إلى الخميس: من 10:00 صباحاً حتى 10:00 مساءً</p>
+                            <p class="text-skybrand text-xs font-bold mt-1">خدمة الواتساب والحجوزات متاحة طوال أيام الأسبوع</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Inquiry Form -->
+                <div class="lg:col-span-7 bg-white p-7 sm:p-9 rounded-3xl shadow-md border border-gray-100">
+                    <h3 class="text-2xl font-bold text-navy mb-2">أرسل طلب استفسار أو حجز</h3>
+                    <p class="text-sm text-gray-500 mb-6 font-tajawal">املأ البيانات التالية وسيتواصل معك أحد ممثلي خدمة العملاء في أسرع وقت.</p>
+
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-navy mb-1.5">الاسم بالكامل *</label>
+                                <input type="text" id="contact-name" required placeholder="أدخل اسمك الكريم" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-navy mb-1.5">رقم الهاتف / واتساب *</label>
+                                <input type="tel" id="contact-phone" required placeholder="01xxxxxxxxx" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20" dir="ltr">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-navy mb-1.5">الخدمة المطلوبة</label>
+                                <select id="contact-service" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand">
+                                    <option value="حجز رحلة سياحة داخلية">حجز رحلة سياحة داخلية</option>
+                                    <option value="حجز رحلة سياحة خارجية">حجز رحلة سياحة خارجية</option>
+                                    <option value="حجز تذاكر طيران">حجز تذاكر طيران</option>
+                                    <option value="برامج الحج والعمرة">برامج الحج والعمرة</option>
+                                    <option value="حجز فنادق ومنتجعات">حجز فنادق ومنتجعات</option>
+                                    <option value="استفسار عام">استفسار عام</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-navy mb-1.5">تاريخ السفر المفضل</label>
+                                <input type="date" id="contact-date" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-700 focus:outline-none focus:border-skybrand">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-navy mb-1.5">تفاصيل إضافية (الوجهة، عدد الأفراد، أي ملاحظات)</label>
+                            <textarea id="contact-message" rows="3" placeholder="اكتب تفاصيل رحلتك هنا..." class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20"></textarea>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                            <button type="submit" class="flex-1 bg-navy hover:bg-skybrand text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all duration-300 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>إرسال الطلب الآن</span>
+                            </button>
+                            <button type="button" onclick="sendContactViaWhatsApp()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>إرسال عبر واتساب</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Instant Confirmation Message Box -->
+                    <div id="contact-success" class="hidden mt-5 p-4 rounded-2xl bg-green-50 border border-green-200 text-green-800 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-2xl text-green-600"></i>
+                        <div>
+                            <h4 class="font-bold">تم استلام طلبك بنجاح!</h4>
+                            <p class="text-xs mt-0.5">شكراً لتواصلك مع خطوة للسياحة والسفر. سيتواصل معك فريقنا خلال دقائق.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Brand Column -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-white rounded-xl p-1.5 flex items-center justify-center">
+                            <svg viewBox="0 0 140 120" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28 22 C35 22 38 27 38 35 L38 58 L28 66 L28 32 C28 26 24 23 22 22 Z" fill="#2BB3F3"/>
+                                <path d="M36 20 L62 20 C56 22 54 26 54 33 L54 51 L41 61 L41 33 C41 26 39 22 36 20 Z" fill="#0B2D6B"/>
+                                <path d="M41 78 L54 68 L54 88 C54 94 56 97 61 99 L36 99 C40 97 41 94 41 88 Z" fill="#0B2D6B"/>
+                                <path d="M58 65 L71 55 L96 87 C101 93 105 97 111 99 L84 99 C79 97 75 93 70 86 Z" fill="#0B2D6B"/>
+                                <path d="M36 101 C18 95 22 72 48 54 C69 39 92 26 104 20 C88 30 67 45 50 59 C29 76 28 93 36 101 Z" fill="#0B2D6B"/>
+                                <path d="M41 101 C29 94 33 76 55 59 C73 45 92 31 106 23 C91 34 74 49 58 63 C39 79 36 94 41 101 Z" fill="#2BB3F3"/>
+                                <g transform="translate(104, 14) rotate(-32)">
+                                    <path d="M2 10 L10 10 L16 1 L20 1 L16 10 L24 10 L27 6 L30 6 L28 11.5 L30 17 L27 17 L24 13 L16 13 L20 22 L16 22 L10 13 L2 13 C0 13 0 10 2 10 Z" fill="#2BB3F3"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="text-xl font-black" dir="ltr">KHOTW<span class="text-skybrand">A</span> Travel</div>
+                            <div class="text-xs text-skybrand font-bold">خطوة للسياحة والسفر</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed font-tajawal">
+                        وجهتك الأولى لكل ما يخص السياحة والسفر، حجز الطيران، الفنادق، ورحلات الحج والعمرة بأعلى جودة وأفضل سعر في مصر.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">روابط سريعة</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-300">
+                        <li><a href="#home" class="hover:text-skybrand transition">الرئيسية</a></li>
+                        <li><a href="#services" class="hover:text-skybrand transition">خدماتنا السياحية</a></li>
+                        <li><a href="#packages" class="hover:text-skybrand transition">أحدث العروض والباقات</a></li>
+                        <li><a href="#about" class="hover:text-skybrand transition">عن الشركة</a></li>
+                        <li><a href="#contact" class="hover:text-skybrand transition">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Popular Destinations -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">أشهر الوجهات</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-300">
+                        <li><a href="#packages" class="hover:text-skybrand transition">رحلات شرم الشيخ والغردقة</a></li>
+                        <li><a href="#packages" class="hover:text-skybrand transition">رحلات دهب والساحل الشمالي</a></li>
+                        <li><a href="#packages" class="hover:text-skybrand transition">برامج العمرة المميزة</a></li>
+                        <li><a href="#packages" class="hover:text-skybrand transition">رحلات دبي وتركيا</a></li>
+                        <li><a href="#packages" class="hover:text-skybrand transition">نايل كروز الأقصر وأسوان</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">بيانات التواصل</h4>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-skybrand mt-1"></i>
+                            <span>حلوان، شارع رايل، تقاطع شارع مصطفى فهمي، أعلى سنتر شاهين.</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-skybrand"></i>
+                            <a href="tel:01557411500" class="hover:text-skybrand transition" dir="ltr">01557411500</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-green-400 text-base"></i>
+                            <a href="https://wa.me/201036271151" target="_blank" rel="noopener noreferrer" class="hover:text-skybrand transition" dir="ltr">01036271151</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+                <p>© 2026 خطوة للسياحة والسفر (KHOTWA Travel). جميع الحقوق محفوظة.</p>
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/201557411500" target="_blank" rel="noopener noreferrer" aria-label="واتساب" class="w-9 h-9 rounded-full bg-white/10 hover:bg-skybrand flex items-center justify-center text-white transition">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:01036271151" aria-label="اتصال" class="w-9 h-9 rounded-full bg-white/10 hover:bg-skybrand flex items-center justify-center text-white transition">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201036271151?text=مرحباً%20خطوة%20للسياحة%20والسفر،%20أرغب%20في%20حجز%20رحلة" target="_blank" rel="noopener noreferrer" aria-label="تواصل واتساب" class="fixed bottom-6 left-6 z-40 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Booking / Package Details Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-navy-dark/75 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-[fadeIn_0.25s_ease-out] max-h-[92vh] overflow-y-auto">
+            <button onclick="closeBookingModal()" aria-label="إغلاق" class="absolute top-5 left-5 w-9 h-9 rounded-full bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-11 h-11 rounded-xl bg-skybrand-light text-navy flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-plane-departure text-skybrand"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-skybrand">حجز فوري - خطوة للسياحة والسفر</span>
+                    <h3 id="modal-title" class="text-xl font-black text-navy">حجز رحلة</h3>
+                </div>
+            </div>
+
+            <div id="modal-package-details" class="hidden bg-slate-50 border border-gray-200 rounded-2xl p-4 mb-5 text-sm">
+                <!-- Populated dynamically when clicking a package -->
+            </div>
+
+            <form id="modal-booking-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-navy mb-1">الاسم بالكامل *</label>
+                    <input type="text" id="modal-name" required placeholder="أدخل اسمك" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-navy mb-1">رقم الهاتف / واتساب *</label>
+                        <input type="tel" id="modal-phone" required placeholder="01xxxxxxxxx" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand" dir="ltr">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-navy mb-1">عدد الأفراد</label>
+                        <input type="number" id="modal-guests" min="1" value="2" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-navy mb-1">تاريخ السفر المفضل</label>
+                    <input type="date" id="modal-date" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-navy mb-1">ملاحظات إضافية</label>
+                    <textarea id="modal-notes" rows="2" placeholder="أي تفاصيل إضافية تود إضافتها..." class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-2.5 pt-2">
+                    <button type="submit" class="flex-1 bg-navy hover:bg-skybrand text-white font-bold py-3 px-5 rounded-xl shadow transition">
+                        تأكيد طلب الحجز
+                    </button>
+                    <button type="button" onclick="confirmViaWhatsApp()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-5 rounded-xl shadow transition flex items-center justify-center gap-1.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>حجز عبر واتساب</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Modal Confirmation Box -->
+            <div id="modal-success" class="hidden text-center py-6 space-y-3">
+                <div class="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-3xl mx-auto">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h4 class="text-xl font-black text-navy">تم إرسال طلب الحجز بنجاح!</h4>
+                <p class="text-sm text-gray-600 font-tajawal">سيتواصل معك فريق <strong>خطوة للسياحة والسفر</strong> قريباً لتأكيد كافة التفاصيل.</p>
+                <button onclick="closeBookingModal()" class="mt-2 bg-navy text-white font-bold px-6 py-2.5 rounded-xl text-sm">حسناً</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Sample Featured Travel Packages Data
+        const packagesData = [
+            {
+                id: 1,
+                title: "منتجع شرم الشيخ 5 نجوم",
+                category: "domestic",
+                categoryLabel: "سياحة داخلية",
+                duration: "4 أيام / 3 ليالي",
+                price: "4,850",
+                image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+                highlights: ["إقامة شاملة الإفطار والعشاء", "انتقالات ذهاب وعودة بأتوبيسات سياحية", "رحلة بحرية مجانية لجزيرة تيران"]
+            },
+            {
+                id: 2,
+                title: "عمرة المولد والرحلات المميزة",
+                category: "umrah",
+                categoryLabel: "حج وعمرة",
+                duration: "10 أيام / 9 ليالي",
+                price: "34,500",
+                image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80",
+                highlights: ["فنادق قريبة من الحرم المكي والنبوي", "تذاكر طيران ذهاب وعودة", "مزارات مكة والمدينة ومشرف مرافق"]
+            },
+            {
+                id: 3,
+                title: "سحر دبي والإمارات",
+                category: "international",
+                categoryLabel: "سياحة خارجية",
+                duration: "5 أيام / 4 ليالي",
+                price: "22,900",
+                image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+                highlights: ["فندق 4 نجوم بالإفطار", "استقبال وتوديع من المطار", "جولة مدينة دبي وسفاري الصحراء"]
+            },
+            {
+                id: 4,
+                title: "استجمام الغردقة والجونة",
+                category: "domestic",
+                categoryLabel: "سياحة داخلية",
+                duration: "4 أيام / 3 ليالي",
+                price: "5,200",
+                image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80",
+                highlights: ["إقامة كاملة (Soft All Inclusive)", "أكوا بارك وشاطئ رملي خاص", "خصم خاص للأطفال"]
+            },
+            {
+                id: 5,
+                title: "إسطنبول وبورصة - تركيا",
+                category: "international",
+                categoryLabel: "سياحة خارجية",
+                duration: "6 أيام / 5 ليالي",
+                price: "24,500",
+                image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80",
+                highlights: ["إقامة في قلب تقسيم أو السلطان أحمد", "رحلة جزر الأميرات وجولة البوسفور", "طيران مباشر وانتقالات VIP"]
+            },
+            {
+                id: 6,
+                title: "مغامرة دهب والبلو هول",
+                category: "domestic",
+                categoryLabel: "سياحة داخلية",
+                duration: "4 أيام / 3 ليالي",
+                price: "3,400",
+                image: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&w=800&q=80",
+                highlights: ["فندق على البحر مباشرة", "رحلة البلو هول والثري بولز", "سهرة بدوية في جبل الطويلات"]
+            }
+        ];
+
+        const packagesGrid = document.getElementById('packages-grid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        let currentSelectedPackage = null;
+
+        // Render Packages Function
+        function renderPackages(filter = 'all') {
+            packagesGrid.innerHTML = '';
+            const filtered = filter === 'all' 
+                ? packagesData 
+                : packagesData.filter(pkg => pkg.category === filter);
+
+            filtered.forEach(pkg => {
+                const highlightsHTML = pkg.highlights.map(item => `
+                    <li class="flex items-center gap-2 text-xs text-gray-600 font-tajawal">
+                        <i class="fa-solid fa-circle-check text-skybrand text-xs"></i>
+                        <span>${item}</span>
+                    </li>
+                `).join('');
+
+                const card = `
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 card-hover flex flex-col justify-between">
+                        <div>
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="${pkg.image}" 
+                                     onerror="this.src='https://placehold.co/800x500/0B2D6B/FFFFFF?text=Khotwa+Travel'"
+                                     alt="${pkg.title}" 
+                                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                <span class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm text-white text-xs font-bold px-3.5 py-1.5 rounded-full">
+                                    ${pkg.categoryLabel}
+                                </span>
+                                <span class="absolute bottom-4 left-4 bg-white/95 text-navy text-xs font-bold px-3 py-1 rounded-lg shadow">
+                                    <i class="fa-regular fa-clock text-skybrand ml-1"></i> ${pkg.duration}
+                                </span>
+                            </div>
+
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy mb-3">${pkg.title}</h3>
+                                <ul class="space-y-2 mb-5">
+                                    ${highlightsHTML}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-gray-400 block">يبدأ من</span>
+                                <span class="text-xl font-black text-navy">${pkg.price} <small class="text-xs font-bold text-skybrand">ج.م</small></span>
+                            </div>
+                            <button onclick="openPackageModal(${pkg.id})" class="bg-navy hover:bg-skybrand text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow transition-colors flex items-center gap-1.5">
+                                <span>تفاصيل وحجز</span>
+                                <i class="fa-solid fa-arrow-left text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                packagesGrid.insertAdjacentHTML('beforeend', card);
+            });
+        }
+
+        // Initial render
+        renderPackages();
+
+        // Filter Button Event Listeners
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-navy', 'text-white', 'shadow');
+                    b.classList.add('bg-white', 'text-navy', 'border', 'border-gray-200');
+                });
+                btn.classList.add('bg-navy', 'text-white', 'shadow');
+                btn.classList.remove('bg-white', 'text-navy', 'border', 'border-gray-200');
+                
+                renderPackages(btn.getAttribute('data-filter'));
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Quick Hero Search Form Submission
+        document.getElementById('quick-search-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const dest = document.getElementById('search-destination').value;
+            const type = document.getElementById('search-type').value;
+            const date = document.getElementById('search-date').value;
+            const guests = document.getElementById('search-guests').value;
+
+            const title = dest !== 'all' ? `حجز رحلة إلى ${dest}` : 'طلب حجز رحلة سياحية';
+            openBookingModal(title);
+
+            if (date) document.getElementById('modal-date').value = date;
+            document.getElementById('modal-notes').value = `الوجهة: ${dest === 'all' ? 'غير محدد' : dest} | عدد الأفراد: ${guests}`;
+        });
+
+        // Modal Logic
+        const bookingModal = document.getElementById('booking-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalPackageDetails = document.getElementById('modal-package-details');
+        const modalBookingForm = document.getElementById('modal-booking-form');
+        const modalSuccess = document.getElementById('modal-success');
+
+        function openBookingModal(title) {
+            currentSelectedPackage = null;
+            modalTitle.textContent = title;
+            modalPackageDetails.classList.add('hidden');
+            modalBookingForm.classList.remove('hidden');
+            modalSuccess.classList.add('hidden');
+            bookingModal.classList.remove('hidden');
+            bookingModal.classList.add('flex');
+        }
+
+        function openPackageModal(pkgId) {
+            const pkg = packagesData.find(p => p.id === pkgId);
+            if (!pkg) return;
+            currentSelectedPackage = pkg;
+            modalTitle.textContent = pkg.title;
+            
+            modalPackageDetails.innerHTML = `
+                <div class="flex justify-between items-center font-bold text-navy mb-2">
+                    <span>المدة: ${pkg.duration}</span>
+                    <span class="text-skybrand text-base">${pkg.price} ج.م / للفرد</span>
+                </div>
+                <ul class="space-y-1 text-xs text-gray-600">
+                    ${pkg.highlights.map(h => `<li>• ${h}</li>`).join('')}
+                </ul>
+            `;
+            modalPackageDetails.classList.remove('hidden');
+            modalBookingForm.classList.remove('hidden');
+            modalSuccess.classList.add('hidden');
+            bookingModal.classList.remove('hidden');
+            bookingModal.classList.add('flex');
+        }
+
+        function closeBookingModal() {
+            bookingModal.classList.add('hidden');
+            bookingModal.classList.remove('flex');
+        }
+
+        // Close modal on outside click
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) closeBookingModal();
+        });
+
+        // Handle Modal Form Submission
+        modalBookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            modalBookingForm.classList.add('hidden');
+            modalSuccess.classList.remove('hidden');
+        });
+
+        // Confirm Modal Booking directly via WhatsApp
+        function confirmViaWhatsApp() {
+            const name = document.getElementById('modal-name').value || 'عميل جديد';
+            const phone = document.getElementById('modal-phone').value || '';
+            const guests = document.getElementById('modal-guests').value || '2';
+            const date = document.getElementById('modal-date').value || 'غير محدد';
+            const notes = document.getElementById('modal-notes').value || '';
+            const tripName = modalTitle.textContent;
+
+            const message = `مرحباً خطوة للسياحة والسفر، أرغب في حجز:\n- الباقة/الخدمة: ${tripName}\n- الاسم: ${name}\n- الهاتف: ${phone}\n- عدد الأفراد: ${guests}\n- التاريخ: ${date}\n- ملاحظات: ${notes}`;
+            const whatsappUrl = `https://wa.me/201036271151?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Contact Section Form Handling
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const successBox = document.getElementById('contact-success');
+            successBox.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 6000);
+        });
+
+        function sendContactViaWhatsApp() {
+            const name = document.getElementById('contact-name').value || 'عميل';
+            const phone = document.getElementById('contact-phone').value || '';
+            const service = document.getElementById('contact-service').value;
+            const date = document.getElementById('contact-date').value || 'غير محدد';
+            const msg = document.getElementById('contact-message').value || '';
+
+            const fullText = `مرحباً خطوة للسياحة والسفر:\n- الاسم: ${name}\n- الهاتف: ${phone}\n- الخدمة: ${service}\n- التاريخ: ${date}\n- التفاصيل: ${msg}`;
+            window.open(`https://wa.me/201557411500?text=${encodeURIComponent(fullText)}`, '_blank', 'noopener,noreferrer');
+        }
+    </script>
+</body>
+</html>
