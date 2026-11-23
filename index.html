@@ -220,13 +220,20 @@
                         </label>
                         <select id="search-destination" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20">
                             <option value="all">جميع الوجهات</option>
-                            <option value="شرم الشيخ">شرم الشيخ</option>
-                            <option value="الغردقة والجونة">الغردقة والجونة</option>
-                            <option value="دهب">دهب</option>
-                            <option value="الأقصر وأسوان">الأقصر وأسوان</option>
-                            <option value="العمرة (مكة والمدينة)">العمرة (مكة والمدينة)</option>
-                            <option value="دبي والإمارات">دبي والإمارات</option>
-                            <option value="تركيا (إسطنبول)">تركيا (إسطنبول)</option>
+                            <optgroup label="وجهات داخل مصر">
+                                <option value="شرم الشيخ">شرم الشيخ</option>
+                                <option value="الغردقة والجونة">الغردقة والجونة</option>
+                                <option value="دهب">دهب</option>
+                                <option value="الأقصر وأسوان">الأقصر وأسوان</option>
+                                <option value="مرسى علم">مرسى علم</option>
+                                <option value="الساحل الشمالي ومطروح">الساحل الشمالي ومطروح</option>
+                                <option value="العين السخنة">العين السخنة</option>
+                                <option value="طابا ونويبع">طابا ونويبع</option>
+                                <option value="سيوة">واحة سيوة</option>
+                            </optgroup>
+                            <optgroup id="all-countries-optgroup" label="جميع دول العالم">
+                                <!-- All world countries populated dynamically in Arabic -->
+                            </optgroup>
                         </select>
                     </div>
 
@@ -580,22 +587,22 @@
                     <h3 class="text-2xl font-bold text-navy mb-2">أرسل طلب استفسار أو حجز</h3>
                     <p class="text-sm text-gray-500 mb-6 font-tajawal">املأ البيانات التالية وسيتواصل معك أحد ممثلي خدمة العملاء في أسرع وقت.</p>
 
-                    <form id="contact-form" class="space-y-4">
+                    <form id="contact-form" action="https://formspree.io/f/xdegpzow" method="POST" class="space-y-4">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-sm font-bold text-navy mb-1.5">الاسم بالكامل *</label>
-                                <input type="text" id="contact-name" required placeholder="أدخل اسمك الكريم" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20">
+                                <input type="text" id="contact-name" name="الاسم_بالكامل" required placeholder="أدخل اسمك الكريم" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-navy mb-1.5">رقم الهاتف / واتساب *</label>
-                                <input type="tel" id="contact-phone" required placeholder="01xxxxxxxxx" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20" dir="ltr">
+                                <input type="tel" id="contact-phone" name="رقم_الهاتف" required placeholder="01xxxxxxxxx" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20" dir="ltr">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-sm font-bold text-navy mb-1.5">الخدمة المطلوبة</label>
-                                <select id="contact-service" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand">
+                                <select id="contact-service" name="الخدمة_المطلوبة" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand">
                                     <option value="حجز رحلة سياحة داخلية">حجز رحلة سياحة داخلية</option>
                                     <option value="حجز رحلة سياحة خارجية">حجز رحلة سياحة خارجية</option>
                                     <option value="حجز تذاكر طيران">حجز تذاكر طيران</option>
@@ -606,17 +613,17 @@
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-navy mb-1.5">تاريخ السفر المفضل</label>
-                                <input type="date" id="contact-date" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-700 focus:outline-none focus:border-skybrand">
+                                <input type="date" id="contact-date" name="تاريخ_السفر" class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-700 focus:outline-none focus:border-skybrand">
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-sm font-bold text-navy mb-1.5">تفاصيل إضافية (الوجهة، عدد الأفراد، أي ملاحظات)</label>
-                            <textarea id="contact-message" rows="3" placeholder="اكتب تفاصيل رحلتك هنا..." class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20"></textarea>
+                            <textarea id="contact-message" name="تفاصيل_إضافية" rows="3" placeholder="اكتب تفاصيل رحلتك هنا..." class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-skybrand focus:ring-2 focus:ring-skybrand/20"></textarea>
                         </div>
 
                         <div class="flex flex-col sm:flex-row gap-3 pt-2">
-                            <button type="submit" class="flex-1 bg-navy hover:bg-skybrand text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all duration-300 flex items-center justify-center gap-2">
+                            <button type="submit" id="contact-submit-btn" class="flex-1 bg-navy hover:bg-skybrand text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all duration-300 flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-paper-plane"></i>
                                 <span>إرسال الطلب الآن</span>
                             </button>
@@ -631,8 +638,17 @@
                     <div id="contact-success" class="hidden mt-5 p-4 rounded-2xl bg-green-50 border border-green-200 text-green-800 flex items-center gap-3">
                         <i class="fa-solid fa-circle-check text-2xl text-green-600"></i>
                         <div>
-                            <h4 class="font-bold">تم استلام طلبك بنجاح!</h4>
-                            <p class="text-xs mt-0.5">شكراً لتواصلك مع خطوة للسياحة والسفر. سيتواصل معك فريقنا خلال دقائق.</p>
+                            <h4 class="font-bold">تم إرسال طلبك بنجاح!</h4>
+                            <p class="text-xs mt-0.5">شكراً لتواصلك مع خطوة للسياحة والسفر. وصلت بياناتك إلى فريقنا وسنتواصل معك خلال دقائق.</p>
+                        </div>
+                    </div>
+
+                    <!-- Error Message Box -->
+                    <div id="contact-error" class="hidden mt-5 p-4 rounded-2xl bg-red-50 border border-red-200 text-red-800 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-exclamation text-2xl text-red-600"></i>
+                        <div>
+                            <h4 class="font-bold">تعذر إرسال الطلب حالياً</h4>
+                            <p class="text-xs mt-0.5">يرجى المحاولة مرة أخرى أو الضغط على زر "إرسال عبر واتساب" للتواصل الفوري.</p>
                         </div>
                     </div>
                 </div>
@@ -756,33 +772,71 @@
                 <!-- Populated dynamically when clicking a package -->
             </div>
 
-            <form id="modal-booking-form" class="space-y-4">
+            <form id="modal-booking-form" action="https://formspree.io/f/xdegpzow" method="POST" class="space-y-4">
                 <div>
                     <label class="block text-xs font-bold text-navy mb-1">الاسم بالكامل *</label>
-                    <input type="text" id="modal-name" required placeholder="أدخل اسمك" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand">
+                    <input type="text" id="modal-name" name="الاسم_بالكامل" required placeholder="أدخل اسمك" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand">
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-bold text-navy mb-1">رقم الهاتف / واتساب *</label>
-                        <input type="tel" id="modal-phone" required placeholder="01xxxxxxxxx" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand" dir="ltr">
+                        <input type="tel" id="modal-phone" name="رقم_الهاتف" required placeholder="01xxxxxxxxx" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand" dir="ltr">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-navy mb-1">عدد الأفراد</label>
-                        <input type="number" id="modal-guests" min="1" value="2" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand">
+                        <input type="text" id="modal-guests" name="عدد_الأفراد" value="فردين (ثنائي)" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-navy mb-1">الوجهة المطلوبة</label>
+                        <select id="modal-destination" name="الوجهة_المطلوبة" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand">
+                            <option value="غير محدد">اختر الوجهة أو الدولة</option>
+                            <optgroup label="وجهات داخل مصر">
+                                <option value="شرم الشيخ">شرم الشيخ</option>
+                                <option value="الغردقة والجونة">الغردقة والجونة</option>
+                                <option value="دهب">دهب</option>
+                                <option value="الأقصر وأسوان">الأقصر وأسوان</option>
+                                <option value="مرسى علم">مرسى علم</option>
+                                <option value="الساحل الشمالي ومطروح">الساحل الشمالي ومطروح</option>
+                                <option value="العين السخنة">العين السخنة</option>
+                                <option value="طابا ونويبع">طابا ونويبع</option>
+                                <option value="واحة سيوة">واحة سيوة</option>
+                            </optgroup>
+                            <optgroup id="modal-countries-optgroup" label="جميع دول العالم">
+                                <!-- All world countries populated dynamically -->
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-navy mb-1">نوع الرحلة</label>
+                        <select id="modal-trip-type" name="نوع_الرحلة" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-sm font-semibold text-gray-700 focus:outline-none focus:border-skybrand">
+                            <option value="سياحة داخلية">سياحة داخلية</option>
+                            <option value="سياحة خارجية">سياحة خارجية</option>
+                            <option value="حج وعمرة">حج وعمرة</option>
+                            <option value="حجز طيران">حجز طيران</option>
+                            <option value="حجز فنادق">حجز فنادق</option>
+                            <option value="أخرى">أخرى</option>
+                        </select>
                     </div>
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-navy mb-1">تاريخ السفر المفضل</label>
-                    <input type="date" id="modal-date" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand">
+                    <label class="block text-xs font-bold text-navy mb-1">تاريخ السفر المتوقع</label>
+                    <input type="date" id="modal-date" name="تاريخ_السفر" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-navy mb-1">ملاحظات إضافية</label>
-                    <textarea id="modal-notes" rows="2" placeholder="أي تفاصيل إضافية تود إضافتها..." class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand"></textarea>
+                    <textarea id="modal-notes" name="ملاحظات_إضافية" rows="2" placeholder="أي تفاصيل إضافية تود إضافتها..." class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-skybrand"></textarea>
+                </div>
+
+                <div id="modal-error" class="hidden p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs">
+                    حدث خطأ أثناء إرسال الطلب. يرجى المحاولة مرة أخرى أو الإرسال عبر واتساب.
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-2.5 pt-2">
-                    <button type="submit" class="flex-1 bg-navy hover:bg-skybrand text-white font-bold py-3 px-5 rounded-xl shadow transition">
-                        تأكيد طلب الحجز
+                    <button type="submit" id="modal-submit-btn" class="flex-1 bg-navy hover:bg-skybrand text-white font-bold py-3 px-5 rounded-xl shadow transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>تأكيد وإرسال الحجز</span>
                     </button>
                     <button type="button" onclick="confirmViaWhatsApp()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-5 rounded-xl shadow transition flex items-center justify-center gap-1.5">
                         <i class="fa-brands fa-whatsapp text-lg"></i>
@@ -797,14 +851,74 @@
                     <i class="fa-solid fa-check"></i>
                 </div>
                 <h4 class="text-xl font-black text-navy">تم إرسال طلب الحجز بنجاح!</h4>
-                <p class="text-sm text-gray-600 font-tajawal">سيتواصل معك فريق <strong>خطوة للسياحة والسفر</strong> قريباً لتأكيد كافة التفاصيل.</p>
-                <button onclick="closeBookingModal()" class="mt-2 bg-navy text-white font-bold px-6 py-2.5 rounded-xl text-sm">حسناً</button>
+                <p class="text-sm text-gray-600 font-tajawal">وصلت بيانات رحلتك إلى فريق <strong>خطوة للسياحة والسفر</strong> وسنتواصل معك في أقرب وقت لتأكيد الحجز.</p>
+                <div class="flex flex-wrap justify-center gap-2 pt-2">
+                    <button type="button" onclick="confirmViaWhatsApp()" class="bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm flex items-center gap-1.5">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>إرسال نسخة عبر واتساب أيضاً</span>
+                    </button>
+                    <button onclick="closeBookingModal()" class="bg-navy text-white font-bold px-6 py-2.5 rounded-xl text-sm">إغلاق</button>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- JavaScript Logic -->
     <script>
+        const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdegpzow";
+
+        // Comprehensive list of all 195 countries of the world in Arabic (sorted alphabetically with popular destinations easy to find)
+        const allWorldCountries = [
+            "آيسلندا", "أذربيجان", "أرمينيا", "أستراليا", "أفغانستان", "ألبانيا", "ألمانيا", "أنتيغوا وباربودا",
+            "أندورا", "أنغولا", "أوروغواي", "أوزبكستان", "أوغندا", "أوكرانيا", "أيرلندا", "إثيوبيا",
+            "إريتريا", "إسبانيا", "إستونيا", "إسواتيني", "إندونيسيا", "إيران", "إيطاليا",
+            "الأرجنتين", "الأردن", "الإكوادور", "الإمارات العربية المتحدة", "البحرين", "البرازيل", "البرتغال",
+            "البوسنة والهرسك", "التشيك", "الجبل الأسود", "الجزائر", "الدنمارك", "الرأس الأخضر", "السلفادور",
+            "السنغال", "السودان", "السويد", "الصومال", "الصين", "العراق", "الغابون", "الفاتيكان",
+            "الفلبين", "الكاميرون", "الكونغو", "الكونغو الديمقراطية", "الكويت", "المالديف", "المجر",
+            "المغرب", "المكسيك", "المملكة العربية السعودية (مكة والمدينة)", "المملكة المتحدة (بريطانيا)",
+            "النرويج", "النمسا", "النيجر", "الهند", "الولايات المتحدة الأمريكية", "اليابان", "اليمن", "اليونان",
+            "بابوا غينيا الجديدة", "باراغواي", "باكستان", "بالاو", "باهاماس", "بربادوس", "بروناي",
+            "بلجيكا", "بلغاريا", "بليز", "بنغلاديش", "بنما", "بنين", "بوتان", "بوتسوانا", "بوركينا فاسو",
+            "بوروندي", "بولندا", "بوليفيا", "بيرو", "بيلاروسيا",
+            "تايلاند", "تايوان", "تركمانستان", "تركيا", "ترينيداد وتوباغو", "تشاد", "تشيلي", "تنزانيا",
+            "توغو", "توفالو", "تونس", "تونغا", "تيمور الشرقية",
+            "جامايكا", "جزر سليمان", "جزر القمر", "جزر مارشال", "جمهورية أفريقيا الوسطى", "جمهورية الدومينيكان",
+            "جنوب أفريقيا", "جنوب السودان", "جورجيا", "جيبوتي",
+            "دومينيكا",
+            "رواندا", "روسيا", "رومانيا",
+            "زامبيا", "زيمبابوي",
+            "ساحل العاج", "ساموا", "سان مارينو", "سانت فينسنت والغرينادين", "سانت كيتس ونيفيس", "سانت لوسيا",
+            "ساو تومي وبرينسيب", "سريلانكا", "سلطنة عمان", "سلوفاكيا", "سلوفينيا", "سنغافورة", "سوريا",
+            "سورينام", "سويسرا", "سيراليون", "سيشل",
+            "صربيا",
+            "طاجيكستان",
+            "غامبيا", "غانا", "غرينادا", "غواتيمالا", "غيانا", "غينيا", "غينيا الاستوائية", "غينيا بيساو",
+            "فانواتو", "فرنسا", "فلسطين", "فنزويلا", "فنلندا", "فيتنام", "فيجي",
+            "قبرص", "قرغيزستان", "قطر",
+            "كازاخستان", "كرواتيا", "كمبوديا", "كندا", "كوبا", "كوريا الجنوبية", "كوريا الشمالية", "كوستاريكا",
+            "كولومبيا", "كيريباتي", "كينيا",
+            "لاتفيا", "لاوس", "لبنان", "لوكسمبورغ", "ليبيا", "ليبيريا", "ليتوانيا", "ليختنشتاين", "ليسوتو",
+            "مالطا", "مالي", "ماليزيا", "مدغشقر", "مصر", "مقدونيا الشمالية", "ملاوي", "منغوليا", "موريتانيا",
+            "موريشيوس", "موزمبيق", "مولدوفا", "موناكو", "ميانمار", "ميكرونيسيا",
+            "ناميبيا", "ناورو", "نيبال", "نيجيريا", "نيكاراغوا", "نيوزيلندا",
+            "هايتي", "هندوراس", "هولندا"
+        ];
+
+        // Populate countries into both search bar and booking modal dropdowns
+        function populateWorldCountries() {
+            const searchOptgroup = document.getElementById('all-countries-optgroup');
+            const modalOptgroup = document.getElementById('modal-countries-optgroup');
+            
+            const optionsHTML = allWorldCountries
+                .map(country => `<option value="${country}">${country}</option>`)
+                .join('');
+                
+            if (searchOptgroup) searchOptgroup.innerHTML = optionsHTML;
+            if (modalOptgroup) modalOptgroup.innerHTML = optionsHTML;
+        }
+        populateWorldCountries();
+
         // Sample Featured Travel Packages Data
         const packagesData = [
             {
@@ -959,15 +1073,29 @@
         document.getElementById('quick-search-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const dest = document.getElementById('search-destination').value;
-            const type = document.getElementById('search-type').value;
+            const typeSelect = document.getElementById('search-type');
+            const typeValue = typeSelect.value;
+            const typeLabel = typeSelect.options[typeSelect.selectedIndex].text;
             const date = document.getElementById('search-date').value;
             const guests = document.getElementById('search-guests').value;
 
             const title = dest !== 'all' ? `حجز رحلة إلى ${dest}` : 'طلب حجز رحلة سياحية';
             openBookingModal(title);
 
-            if (date) document.getElementById('modal-date').value = date;
-            document.getElementById('modal-notes').value = `الوجهة: ${dest === 'all' ? 'غير محدد' : dest} | عدد الأفراد: ${guests}`;
+            // Pre-fill modal fields from quick search bar
+            if (dest !== 'all') {
+                const modalDestSelect = document.getElementById('modal-destination');
+                modalDestSelect.value = dest;
+            }
+            if (typeValue !== 'all') {
+                document.getElementById('modal-trip-type').value = typeLabel;
+            }
+            if (date) {
+                document.getElementById('modal-date').value = date;
+            }
+            if (guests) {
+                document.getElementById('modal-guests').value = guests;
+            }
         });
 
         // Modal Logic
@@ -976,6 +1104,7 @@
         const modalPackageDetails = document.getElementById('modal-package-details');
         const modalBookingForm = document.getElementById('modal-booking-form');
         const modalSuccess = document.getElementById('modal-success');
+        const modalError = document.getElementById('modal-error');
 
         function openBookingModal(title) {
             currentSelectedPackage = null;
@@ -983,6 +1112,7 @@
             modalPackageDetails.classList.add('hidden');
             modalBookingForm.classList.remove('hidden');
             modalSuccess.classList.add('hidden');
+            modalError.classList.add('hidden');
             bookingModal.classList.remove('hidden');
             bookingModal.classList.add('flex');
         }
@@ -1005,6 +1135,8 @@
             modalPackageDetails.classList.remove('hidden');
             modalBookingForm.classList.remove('hidden');
             modalSuccess.classList.add('hidden');
+            modalError.classList.add('hidden');
+            document.getElementById('modal-trip-type').value = pkg.categoryLabel;
             bookingModal.classList.remove('hidden');
             bookingModal.classList.add('flex');
         }
@@ -1019,36 +1151,115 @@
             if (e.target === bookingModal) closeBookingModal();
         });
 
-        // Handle Modal Form Submission
-        modalBookingForm.addEventListener('submit', (e) => {
+        // Handle Modal Form Submission via Formspree AJAX
+        modalBookingForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            modalBookingForm.classList.add('hidden');
-            modalSuccess.classList.remove('hidden');
+            modalError.classList.add('hidden');
+            
+            const submitBtn = document.getElementById('modal-submit-btn');
+            const originalBtnHTML = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>جاري إرسال الحجز...</span>';
+
+            const payload = {
+                _subject: `طلب حجز جديد من موقع خطوة للسياحة: ${modalTitle.textContent}`,
+                الباقة_أو_العنوان: modalTitle.textContent,
+                الاسم_بالكامل: document.getElementById('modal-name').value,
+                رقم_الهاتف_واتساب: document.getElementById('modal-phone').value,
+                الوجهة_المطلوبة: document.getElementById('modal-destination').value,
+                نوع_الرحلة: document.getElementById('modal-trip-type').value,
+                عدد_الأفراد: document.getElementById('modal-guests').value,
+                تاريخ_السفر_المتوقع: document.getElementById('modal-date').value || 'غير محدد',
+                ملاحظات_إضافية: document.getElementById('modal-notes').value || 'لا يوجد'
+            };
+
+            try {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    modalBookingForm.classList.add('hidden');
+                    modalSuccess.classList.remove('hidden');
+                } else {
+                    modalError.classList.remove('hidden');
+                }
+            } catch (err) {
+                modalError.classList.remove('hidden');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+            }
         });
 
         // Confirm Modal Booking directly via WhatsApp
         function confirmViaWhatsApp() {
             const name = document.getElementById('modal-name').value || 'عميل جديد';
             const phone = document.getElementById('modal-phone').value || '';
-            const guests = document.getElementById('modal-guests').value || '2';
+            const dest = document.getElementById('modal-destination').value || 'غير محدد';
+            const tripType = document.getElementById('modal-trip-type').value || '';
+            const guests = document.getElementById('modal-guests').value || 'فردين';
             const date = document.getElementById('modal-date').value || 'غير محدد';
             const notes = document.getElementById('modal-notes').value || '';
             const tripName = modalTitle.textContent;
 
-            const message = `مرحباً خطوة للسياحة والسفر، أرغب في حجز:\n- الباقة/الخدمة: ${tripName}\n- الاسم: ${name}\n- الهاتف: ${phone}\n- عدد الأفراد: ${guests}\n- التاريخ: ${date}\n- ملاحظات: ${notes}`;
+            const message = `مرحباً خطوة للسياحة والسفر، أرغب في حجز:\n- الباقة/الخدمة: ${tripName}\n- الوجهة: ${dest}\n- نوع الرحلة: ${tripType}\n- الاسم: ${name}\n- الهاتف: ${phone}\n- عدد الأفراد: ${guests}\n- التاريخ: ${date}\n- ملاحظات: ${notes}`;
             const whatsappUrl = `https://wa.me/201036271151?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
         }
 
-        // Contact Section Form Handling
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
+        // Contact Section Form Handling via Formspree AJAX
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const successBox = document.getElementById('contact-success');
-            successBox.classList.remove('hidden');
-            e.target.reset();
-            setTimeout(() => {
-                successBox.classList.add('hidden');
-            }, 6000);
+            const errorBox = document.getElementById('contact-error');
+            const submitBtn = document.getElementById('contact-submit-btn');
+            const originalBtnHTML = submitBtn.innerHTML;
+
+            successBox.classList.add('hidden');
+            errorBox.classList.add('hidden');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>جاري الإرسال...</span>';
+
+            const payload = {
+                _subject: "طلب استفسار / تواصل جديد - موقع خطوة للسياحة والسفر",
+                الاسم_بالكامل: document.getElementById('contact-name').value,
+                رقم_الهاتف_واتساب: document.getElementById('contact-phone').value,
+                الخدمة_المطلوبة: document.getElementById('contact-service').value,
+                تاريخ_السفر_المفضل: document.getElementById('contact-date').value || 'غير محدد',
+                تفاصيل_إضافية: document.getElementById('contact-message').value || 'لا يوجد'
+            };
+
+            try {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    successBox.classList.remove('hidden');
+                    e.target.reset();
+                    setTimeout(() => {
+                        successBox.classList.add('hidden');
+                    }, 7000);
+                } else {
+                    errorBox.classList.remove('hidden');
+                }
+            } catch (err) {
+                errorBox.classList.remove('hidden');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+            }
         });
 
         function sendContactViaWhatsApp() {
